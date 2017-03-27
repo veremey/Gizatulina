@@ -1,0 +1,272 @@
+.calendar
+	margin-bottom: 30px
+	+clr
+	&__title
+		font-size: 18px
+		letter-spacing: .05em
+		text-transform: uppercase
+		text-align: center
+		color: $fiolet
+		margin: 0 0 .8em
+		+ol
+	&__wrap
+		display: flex
+		justify-content: space-around
+		+r(1015)
+			display: block
+
+.op
+	opacity: .6
+.highlight
+	border-radius: 34px
+	overflow: hidden
+
+/*ширина, позиция*/
+
+.ui-datepicker
+	width: 300px
+	max-width: 100%
+	height: auto
+	margin: 5px auto 0
+	font: 9pt Arial, sans-serif
+	// box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5)
+	a
+		text-decoration: none
+	table
+		width: 100%
+.ui-datepicker-calendar thead
+	display: none
+// .selected_week
+// .selectordrop ul li
+// 	height: 40px
+// 	position: relative
+// 	a
+// 		color: #929292
+// 		height: 40px
+// 		padding-top: 9px
+// 	img
+// 		height: 30px
+// 		position: absolute
+// 		top: 4px
+// 		left: 140px
+
+/*заголовок календаря*/
+.ui-datepicker-header
+	color: #444444
+	font-weight: bold
+
+.ui-datepicker-title
+	text-align: center
+	margin-bottom: 36px
+	font-size: 18px
+	letter-spacing: .05em
+	color: #464646
+	text-transform: uppercase
+	+ol
+	+r(500)
+		font-size: 12px
+		margin: 0 0 15px
+		padding-top: 2px
+
+/*стрелочки вперед и назад*/
+.ui-datepicker-prev,
+.ui-datepicker-next
+	display: inline-block
+	width: 30px
+	height: 30px
+	text-align: center
+	cursor: pointer
+	line-height: 600%
+	overflow: hidden
+
+/*расположение стрелок*/
+
+.ui-datepicker-prev
+	float: left
+	+s(arrowprevus)
+	+tr(.4s)
+	&:hover
+		+gray
+
+.ui-datepicker-next
+	float: right
+	+s(arrownextus)
+	+tr(.4s)
+	&:hover
+		+gray
+
+
+.inlinedate
+	display: inline-block
+	vertical-align: top
+	padding-top: 15px
+	text-align: center
+	+r(1015)
+		display: block
+		margin-bottom: 40px
+.tempTable
+	display: inline-block
+	vertical-align: top
+	color: $fiolet
+	font-size: 12px
+	letter-spacing: .025em
+	color: $fiolet
+	line-height: 20px
+	text-transform: uppercase
+	+osb
+	+r(1015)
+		display: block
+	+r(500)
+		margin: 0 0 0 -15px
+	table
+		+r(1015)
+			margin: 0 auto
+		thead
+			line-height: 44px
+			border-bottom: 1px solid #eceff5
+			th
+				padding: 0 10px
+				font-size: 12px
+				letter-spacing: .025em
+				+osb
+				+r(500)
+					// font-size: 10px
+					padding: 2px 5px
+					line-height: 1.4
+
+		tbody
+			> tr
+				line-height: 39px
+				// border-bottom: 1px solid #eceff5
+				text-align: center
+		.weekends
+			border-left: 1px solid rgb(255, 255, 255)
+			background-color: #eceff5
+
+.tempTable .days
+	cursor: pointer
+	+r(500)
+		font-size: 10px
+.pickedDate
+	position: relative
+	color: #D5239B
+	&:after
+		content: ''
+		position: absolute
+		top: -5px
+		bottom: -5px
+		left: 5px
+		right: 5px
+		border-radius: 100%
+		border: 2px solid $fiolet
+.dropdown_selector
+	margin: 45px 0px
+.pickedDateVisual
+	color: #D5239B
+
+
+#secondTable .weekends
+	background-color: #ECEFF4
+.ui-datepicker thead
+	background-color: #f7f7f7
+	background-image: -moz-linear-gradient(top,  #f7f7f7 0%, #f1f1f1 100%)
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#f1f1f1))
+	background-image: -webkit-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%)
+	background-image: -o-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%)
+	background-image: -ms-linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%)
+	background-image: linear-gradient(top,  #f7f7f7 0%,#f1f1f1 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1',GradientType=0 )
+	border-bottom: 1px solid #bbb
+
+/*дни недели*/
+.ui-datepicker th
+	text-transform: uppercase
+	font-size: 6pt
+	padding: 5px 0
+	color: #666666
+	text-shadow: 1px 0px 0px #fff
+	filter: dropshadow(color=#fff, offx=1, offy=0)
+
+/*даты*/
+.ui-datepicker tbody td
+	padding: 10px
+
+/* расстояния между датами, цвет текста*/
+.ui-datepicker td span, .ui-datepicker td a
+	display: inline-block
+	font-weight: bold
+	text-align: center
+	width: 10px
+	height: 10px
+	line-height: 10px
+	color: #A05483
+	// /*  text-shadow: 1px 1px 0px #fff*/
+	filter: dropshadow(color=#fff, offx=1, offy=1)
+	font-size: 13px
+
+.ui-datepicker-calendar .ui-state-default
+	//   background: #ededed
+	// 	box-shadow: inset 1px 1px 0px 0px rgba(250, 250, 250, .5)*/
+
+.ui-datepicker-unselectable .ui-state-default
+	// /*  background: #f4f4f4*/
+	color: #b4b3b3
+
+/* наведение */
+.ui-datepicker-calendar .ui-state-hover
+	// /* background: #f7f7f7*/
+
+/*пикнули*/
+.ui-datepicker-calendar .ui-state-active
+	// /*  background: red
+	// -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1)
+	// -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1)
+	// box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, .1)
+	// color: #e0e0e0
+	// text-shadow: 0px 1px 0px #4d7a85
+	// filter: dropshadow(color=#4d7a85, offx=0, offy=1)
+	// border: 1px solid #55838f
+	// position: relative
+	// margin: -1px*/
+
+
+/*бонус какой-то*/
+.ui-datepicker-calendar td:first-child .ui-state-active
+	// /*  width: 29px
+	//   margin-left: 0*/
+.ui-datepicker-calendar td:last-child .ui-state-active
+	// width: 29px
+	// margin-right: 0
+
+.ui-datepicker-calendar tr:last-child .ui-state-active
+	// height: 29px
+	// margin-bottom: 0
+
+.subsribe
+	text-align: center
+	&-btn
+		width: 100%
+		max-width: 340px
+		height: 50px
+		background-color: $fiolet
+		border: none
+		outline: none
+		font-size: 14px
+		text-transform: uppercase
+		color: #fff
+		letter-spacing: .05em
+		+tr(.4s)
+		&:hover
+			opacity: .8
+
+.skill-items .price
+	font-size: 35px
+	margin-left: 12px
+.skill-items .btn
+	height: 47px
+	width: 230px
+.btn p
+	margin-top: 6px
+.btn
+	height: 47px
+	width: 230px

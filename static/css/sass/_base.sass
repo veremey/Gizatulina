@@ -1,0 +1,63 @@
++font('opensans-regular', 'opensans-regular')
++font('ptsans-webfont', 'ptsans-webfont')
+
+=pr
+	font-family: 'ptsans-webfont', Arial, sans-serif
+=or
+	font-family: 'opensans-regular', Arial, sans-serif
+=ol
+	font-family: 'opensans-regular', Arial, sans-serif
+	font-weight: 300
+=osb
+	font-family: 'opensans-regular', Arial, sans-serif
+	font-weight: 600
+
+
+// colors
+$n: transparent
+$body: #f4efeb
+$fiolet: #a24e84
+
+
+html
+	+selection
+		background: rgba(0, 0, 0, .2)
+		color: #fff
+
+
+// common blocks
+
+.out
+	position: relative
+	background-color: $body
+	+clr
+	&-inner
+		max-width: 1125px
+		width: 96%
+		margin: 0 auto
+
+.btn__style
+	display: block
+	max-width: 240px
+	width: 100%
+	margin: 0 auto
+	height: 50px
+	color: $fiolet
+	text-transform: uppercase
+	font-size: 14px
+	letter-spacing: .05em
+	text-decoration: none
+	border: 1px solid $fiolet
+	line-height: 50px
+	text-align: center
+	+tr(.4s)
+	+osb
+	+r(750)
+		max-width: 100%
+	&:hover
+		color: #fff
+		background-color: $fiolet
+
+h1, h2, h3, h4, h5, h6, b, strong, th
+	font-weight: normal
+

@@ -1,0 +1,397 @@
+.modal
+	display: none
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background-color: rgba(151, 153, 160, .4)
+	&-bg
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		left: 0
+		z-index: 3
+	&-window
+		position: relative
+		max-width: 1125px
+		width: 96%
+		max-height: 96vh
+		overflow: hidden
+		margin: 0 auto
+		top: 50%
+		+try(-50%)
+	&-dialog
+		position: relative
+		// top: 50%
+		max-width: 1125px
+		width: 96%
+		margin: 0 auto
+		background-color: #FFF
+		// transform: translate(0, -50%)
+		box-shadow: 0 0 70px 3px rgba(0, 0, 0, .35)
+		&-wrp
+			padding: 40px 7%
+
+	&-content
+		padding: 1px
+	&-title
+		color: $fiolet
+		font-size: 26px
+		line-height: 1.1
+		margin: .8em 0
+		text-transform: uppercase
+		text-align: center
+		letter-spacing: .025em
+		+or
+	&-body
+		margin-top: 40px
+
+	&-contacts
+		font-size: 0
+		&-fieldset
+			position: relative
+			width: 32%
+			height: 40px
+			vertical-align: top
+			display: inline-block
+			margin-right: 2%
+			border: 1px solid #dadfe9
+			+r(750)
+				width: 100%
+				margin-bottom: 12px
+			&:last-child
+				margin-right: 0
+				+r(750)
+					margin-bottom: 0
+			&.input--filled
+				.modal-contacts-label
+					top: 10px
+					font-size: 10px
+				.modal-contacts-control
+					padding-top: 16px
+		&-control
+			width: 100%
+			height: 100%
+			border: none
+			outline: none
+			padding: 0 20px
+			color: #464646
+			text-transform: uppercase
+			font-size: 12px
+			letter-spacing: .025em
+			+osb
+			+tr(.4s)
+			&.has-error
+				border-color: #f00
+				box-shadow: 0 0 3px 1px #f00
+		&-label
+			position: absolute
+			top: 50%
+			left: 20px
+			+try(-50%)
+			font-size: 12px
+			color: #b7b7b7
+			+osb
+			+tr(.4s)
+
+	&-senks
+		display: none
+		position: relative
+		// top: 50%
+		max-width: 1125px
+		width: 96%
+		margin: 0 auto
+		background-color: #FFF
+		box-shadow: 0 0 70px 3px rgba(0, 0, 0, .35)
+		// transform: translate(0, -50%)
+		.modal-wrp
+			padding-bottom: 0
+	&-wrp
+		padding: 40px 7%
+
+	&__btns
+		margin: 50px auto 30px
+		max-width: 668px
+		font-size: 0
+	&__footer
+		border-top: 1px solid #ecdce6
+		min-height: 50px
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 13px
+		letter-spacing: .05em
+		color: $fiolet
+		padding: 10px 40px
+		+ol
+
+
+#modal-jun,
+#modal-spec,
+#modal-yahh,
+#modal-all
+	position: relative
+	z-index: 20
+	display: none
+
+.btn-see
+	// height: 30px
+	display: inline-block
+	width: 32%
+	margin-right: 2%
+	background-color: $fiolet
+	color: #fff
+	text-transform: uppercase
+	font-size: 12px
+	letter-spacing: .025em
+	text-align: center
+	line-height: 30px
+	text-decoration: none
+	+osb
+	+tr(.4s)
+	+r(840)
+		width: 100%
+		margin-bottom: 10px
+		line-height: 40px
+	&:hover
+		opacity: .8
+	&:last-child
+		margin-right: 0
+
+
+.dropdown_selector
+	display: flex
+	align-items: center
+	+r(750)
+		display: block
+	&_desc
+		display: flex
+		flex: 0 0 120px
+		font-size: 18px
+		text-transform: uppercase
+		letter-spacing: .05em
+		margin: 0
+		color: $fiolet
+		+ol
+		+r(750)
+			display: block
+			text-align: center
+			margin-bottom: 20px
+	.select
+		position: relative
+		display: flex
+		flex-grow: 1
+
+		height: 88px
+		padding: 0 20px
+		border: 1px solid #dadfe9
+		cursor: pointer
+		+r(500)
+			padding: 0 10px
+			height: 60px
+
+		&:after
+			content: ""
+			position: absolute
+			display: inline-block
+			top: 50%
+			right: 20px
+			transform: translateY(-50%)
+			+s(icon-select)
+		&__text
+			position: relative
+			display: flex
+			align-items: center
+			width: 100%
+			height: 100%
+			color: #000
+			line-height: 34px
+			-webkit-touch-callout: none
+			-webkit-user-select: none
+			-khtml-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			text-transform: uppercase
+			+box
+			+or
+		&__pic
+			position: relative
+			width: 76px
+			height: 76px
+			// background-color: #eceff5
+			border-radius: 100%
+			overflow: hidden
+			margin-right: 18px
+			background: #eceff5 url('../img/icon-empty.png') center center no-repeat
+			+r(500)
+				width: 50px
+				height: 50px
+				margin-right: 10px
+			+r(400)
+				display: none
+			img
+				+vcenter
+		&__name
+			font-size: 16px
+			text-transform: uppercase
+			letter-spacing: .025em
+			color: #464646
+			+ol
+			+r(500)
+				font-size: 14px
+			span
+				text-transform: lowercase
+				+r(500)
+					display: block
+		&__list
+			position: absolute
+			display: none
+			left: -1px
+			right: -1px
+			top: 100%
+			margin: 0
+			padding-bottom: 5px
+			border-radius: 0 0 3px 3px
+			z-index: 100
+			background: #fff
+			border: 1px solid #dadfe9
+			border-top: none
+			li
+				display: flex
+				align-items: center
+				width: 100%
+				font-size: 14px
+				height: 88px
+				color: #000
+				padding: 0 20px
+				text-align: center
+				cursor: pointer
+				-webkit-transition: background 0.2s linear
+				-moz-transition: background 0.2s linear
+				-o-transition: background 0.2s linear
+				transition: background 0.2s linear
+				text-transform: uppercase
+				+or
+				+tr(.4s)
+				+r(500)
+					padding: 0 10px
+					height: 60px
+					text-align: left
+				&:hover
+					background-color: #f0f2f7
+
+
+.btn
+	&__close
+		width: 36px
+		height: 36px
+		position: absolute
+		top: 20px
+		right: 20px
+		background-color: $n
+		border: none
+		outline: none
+		cursor: pointer
+		+tr(.4s)
+		&:before,
+		&:after
+			content: none
+		&:hover
+			width: 30px
+			right: 23px
+			top: 22px
+		span
+			display: block
+			position: absolute
+			height: 2px
+			width: 100%
+			background: $fiolet
+			border-radius: 2px
+			opacity: 1
+			left: -6px
+			top: 17px
+			-webkit-transform: rotate(0deg)
+			-moz-transform: rotate(0deg)
+			-o-transform: rotate(0deg)
+			transform: rotate(0deg)
+			-webkit-transition: .25s ease-in-out
+			-moz-transition: .25s ease-in-out
+			-o-transition: .25s ease-in-out
+			transition: .25s ease-in-out
+			&:nth-child(1)
+				-webkit-transform: rotate(45deg)
+				-moz-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+				width: 130%
+			&:nth-child(2)
+				width: 0%
+				opacity: 0
+			&:nth-child(3)
+				-webkit-transform: rotate(-45deg)
+				-moz-transform: rotate(-45deg)
+				-o-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+				width: 130%
+
+.consul
+	max-width: 400px
+	width: 96%
+	margin: 0 auto
+	+r(850)
+		text-align: center
+	&__box
+		text-align: center
+		border: 2px solid $fiolet
+		line-height: 70px
+		text-transform: uppercase
+		font-size: 24px
+		letter-spacing: .05em
+		color: $fiolet
+		margin: 50px 0 40px
+	&__table
+		display: table
+		width: 100%
+		border-top: 1px solid $fiolet
+		margin-bottom: 70px
+		+r(500)
+			display: block
+			margin-bottom: 30px
+		ul
+			display: table-row
+			border-top: 1px solid $fiolet
+			// border-bottom: 1px solid $fiolet
+			line-height: 30px
+			color: $fiolet
+			margin: 0
+			+r(500)
+				display: block
+				padding: 10px 0
+			&:first-child
+				border-top: none
+		li
+			display: table-cell
+			font-size: 12px
+			border-bottom: 1px solid $fiolet
+			+ol
+			+r(500)
+				display: block
+				border: none
+				line-height: 1.4
+		li:first-child
+			padding-left: 20px
+			+r(500)
+				padding: 0
+	&__title
+		font-size: 34px
+		text-transform: uppercase
+		font-family: 'Lora', serif
+		margin: 0 auto 0px
+		color: $fiolet
+	&__subtitle
+		font-size: 20px
+		color: $fiolet
+		text-align: center

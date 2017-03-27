@@ -1,0 +1,13 @@
+// Normally icon styles
+@each $s in icon-bra-01,icon-bra-02,icon-bra-03
+	.#{$s}
+		+vcenter
+		+s(#{$s})
+
+@each $s in icon-calend,icon-all,iocn-cls
+	.#{$s}
+		display: inline-block
+		vertical-align: middle
+		margin-right: 10px
+		+s(#{$s})
+

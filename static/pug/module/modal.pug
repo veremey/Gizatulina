@@ -1,0 +1,648 @@
+// HTML-код модального окна
+#myModal.modal
+	.modal-bg
+	#modal-jun.modal-window.js-spec
+		.modal-dialog
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-dialog-wrp
+				.modal-content
+					.modal-header
+						h4.modal-title ЗАПИСАТЬСЯ к младшим стилистам
+					form(action="/", nethod="post").modal-body.js-validate
+						.modal-contacts
+							fieldset.modal-contacts-fieldset
+								input#user-name.modal-contacts-control(type='text', name='name', required)
+								label.modal-contacts-label ВАШЕ ИМЯ
+							fieldset.modal-contacts-fieldset
+								input#user-email.modal-contacts-control(type='text', name='email', required)
+								label.modal-contacts-label ЭЛ. ПОЧТА
+							fieldset.modal-contacts-fieldset
+								input#user-phone.modal-contacts-control(type='text', name='phone')
+								label.modal-contacts-label ТЕЛЕФОН
+
+						.dropdown_selector
+							p.dropdown_selector_desc Выберите Стилиста
+							.select.js-select
+								.select__text.js-select-text
+									.select__pic
+									p.select__name любой свободный
+								input(type="hidden", value="", name="collection", required).js-select-input
+								ul.select__list.js-select-list
+									li(data-id="0")
+										.select__pic
+										p.select__name любой свободный
+									li(data-id="1")
+										.select__pic
+											img(src="static/img/sec-01.jpg", alt="")
+										p.select__name проскурина мария.
+											span Младший стилист
+									li(data-id="2")
+										.select__pic
+											img(src="static/img/sec-02.jpg", alt="")
+										p.select__name белякова анастасия.
+											span Младший стилист
+									li(data-id="3")
+										.select__pic
+											img(src="static/img/sec-03.jpg", alt="")
+										p.select__name никитина наталья.
+											span Младший стилист
+									li(data-id="4")
+										.select__pic
+											img(src="static/img/sec-04.jpg", alt="")
+										p.select__name авдеева светлана.
+											span Младший стилист
+
+						.calendar
+							h5.calendar__title ВЫБЕРИТЕ УДОБНУЮ ДАТУ И ВРЕМЯ
+							.calendar__wrap
+								.inlinedate
+
+								.tempTable
+									table.table.table-responsive
+										thead
+											tr
+												th.mon
+												th.tue
+												th.wed
+												th.thu
+												th.fri
+												th.sat.weekends
+												th.sun.weekends
+										tbody
+											tr(style='border-bottom: 1px solid #ddd;')
+												td.mon ПН
+												td.tue ВТ
+												td.wed СР
+												td.thu ЧТ
+												td.fri ПТ
+												td.sat СБ
+												td.sun ВС
+											tr
+												td.mon.days 10:00
+												td.tue.days
+												td.wed.days 10:00
+												td.thu.days 10:00
+												td.fri.days 10:00
+												td.sat.days.weekends
+												td.sun.days.weekends 10:00
+											tr
+												td.mon.days 12:00
+												td.tue.days 12:00
+												td.wed.days 12:00
+												td.thu.days
+												td.fri.days 12:00
+												td.sat.days.weekends 12:00
+												td.sun.days.weekends 12:00
+											tr
+												td.mon.days 14:00
+												td.tue.days 14:00
+												td.wed.days 14:00
+												td.thu.days
+												td.fri.days 14:00
+												td.sat.days.weekends
+												td.sun.days.weekends 14:00
+											tr
+												td.mon.days 16:00
+												td.tue.days 16:00
+												td.wed.days 16:00
+												td.thu.days
+												td.fri.days 16:00
+												td.sat.days.weekends
+												td.sun.days.weekends 16:00
+											tr
+												td.mon.days 18:00
+												td.tue.days 18:00
+												td.wed.days 18:00
+												td.thu.days
+												td.fri.days 18:00
+												td.sat.days.weekends 18:00
+												td.sun.days.weekends 18:00
+											tr
+												td.mon.days 20:00
+												td.tue.days 20:00
+												td.wed.days 20:00
+												td.thu.days 20:00
+												td.fri.days 20:00
+												td.sat.days.weekends
+												td.sun.days.weekends 20:00
+
+						.subsribe
+							button.subsribe-btn.js-open-senks(type='button') Записаться
+		.modal-senks.js-senks
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-wrp
+				.modal-header
+					h4.modal-title Спасибо! Сервис успешно зарезервирован
+				.consul
+					p.consul__box 14 февраля  / 18:00
+					.consul__table
+						ul
+							li Вас обслуживает:
+							li Старший стилист Елена
+						ul
+							li Дата / время:
+							li 10-02-2017  /  10:00
+					h3.consul__title АЛИНА  ГИЗАТУЛЛИНА
+					p.consul__subtitle бельевой стайлинг
+				.modal__btns
+					a(href="#").btn-see
+						i.icon-calend
+						span добавить в календарь
+					a(href="#").btn-see
+						i.icon-all
+						span просмотр всех событий
+					a(href="#").btn-see
+						i.iocn-cls
+						span отменить бронирование
+			.modal__footer
+				p Пожалуйста, проверьте вашу электронную почту, вам было выслано уведомление о бронировании.
+	#modal-spec.modal-window.js-spec
+		.modal-dialog
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-dialog-wrp
+				.modal-content
+					.modal-header
+						h4.modal-title ЗАПИСАТЬСЯ к стилисту
+					form(action="/", nethod="post").modal-body.js-validate
+						.modal-contacts
+							fieldset.modal-contacts-fieldset
+								input#user-name.modal-contacts-control(type='text', name='name', required)
+								label.modal-contacts-label ВАШЕ ИМЯ
+							fieldset.modal-contacts-fieldset
+								input#user-email.modal-contacts-control(type='text', name='email', required)
+								label.modal-contacts-label ЭЛ. ПОЧТА
+							fieldset.modal-contacts-fieldset
+								input#user-phone.modal-contacts-control(type='text', name='phone')
+								label.modal-contacts-label ТЕЛЕФОН
+
+						.dropdown_selector
+							p.dropdown_selector_desc Выберите Стилиста
+							.select.js-select
+								.select__text.js-select-text
+									.select__pic
+									p.select__name любой свободный
+								input(type="hidden", value="", name="collection", required).js-select-input
+								ul.select__list.js-select-list
+									li(data-id="0")
+										.select__pic
+										p.select__name любой свободный
+									li(data-id="1")
+										.select__pic
+											img(src="static/img/sec-01.jpg", alt="")
+										p.select__name проскурина мария.
+											span Младший стилист
+									li(data-id="2")
+										.select__pic
+											img(src="static/img/sec-02.jpg", alt="")
+										p.select__name белякова анастасия.
+											span Младший стилист
+									li(data-id="3")
+										.select__pic
+											img(src="static/img/sec-03.jpg", alt="")
+										p.select__name никитина наталья.
+											span Младший стилист
+									li(data-id="4")
+										.select__pic
+											img(src="static/img/sec-04.jpg", alt="")
+										p.select__name авдеева светлана.
+											span Младший стилист
+
+						.calendar
+							h5.calendar__title ВЫБЕРИТЕ УДОБНУЮ ДАТУ И ВРЕМЯ
+							.calendar__wrap
+								.inlinedate
+
+								.tempTable
+									table.table.table-responsive
+										thead
+											tr
+												th.mon
+												th.tue
+												th.wed
+												th.thu
+												th.fri
+												th.sat.weekends
+												th.sun.weekends
+										tbody
+											tr(style='border-bottom: 1px solid #ddd;')
+												td.mon ПН
+												td.tue ВТ
+												td.wed СР
+												td.thu ЧТ
+												td.fri ПТ
+												td.sat СБ
+												td.sun ВС
+											tr
+												td.mon.days 10:00
+												td.tue.days
+												td.wed.days 10:00
+												td.thu.days 10:00
+												td.fri.days 10:00
+												td.sat.days.weekends
+												td.sun.days.weekends 10:00
+											tr
+												td.mon.days 12:00
+												td.tue.days 12:00
+												td.wed.days 12:00
+												td.thu.days
+												td.fri.days 12:00
+												td.sat.days.weekends 12:00
+												td.sun.days.weekends 12:00
+											tr
+												td.mon.days 14:00
+												td.tue.days 14:00
+												td.wed.days 14:00
+												td.thu.days
+												td.fri.days 14:00
+												td.sat.days.weekends
+												td.sun.days.weekends 14:00
+											tr
+												td.mon.days 16:00
+												td.tue.days 16:00
+												td.wed.days 16:00
+												td.thu.days
+												td.fri.days 16:00
+												td.sat.days.weekends
+												td.sun.days.weekends 16:00
+											tr
+												td.mon.days 18:00
+												td.tue.days 18:00
+												td.wed.days 18:00
+												td.thu.days
+												td.fri.days 18:00
+												td.sat.days.weekends 18:00
+												td.sun.days.weekends 18:00
+											tr
+												td.mon.days 20:00
+												td.tue.days 20:00
+												td.wed.days 20:00
+												td.thu.days 20:00
+												td.fri.days 20:00
+												td.sat.days.weekends
+												td.sun.days.weekends 20:00
+
+						.subsribe
+							button.subsribe-btn.js-open-senks(type='button') Записаться
+		.modal-senks.js-senks
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-wrp
+				.modal-header
+					h4.modal-title Спасибо! Сервис успешно зарезервирован
+				.consul
+					p.consul__box 14 февраля  / 18:00
+					.consul__table
+						ul
+							li Вас обслуживает:
+							li Старший стилист Елена
+						ul
+							li Дата / время:
+							li 10-02-2017  /  10:00
+					h3.consul__title АЛИНА  ГИЗАТУЛЛИНА
+					p.consul__subtitle бельевой стайлинг
+				.modal__btns
+					a(href="#").btn-see
+						i.icon-calend
+						span добавить в календарь
+					a(href="#").btn-see
+						i.icon-all
+						span просмотр всех событий
+					a(href="#").btn-see
+						i.iocn-cls
+						span отменить бронирование
+			.modal__footer
+				p Пожалуйста, проверьте вашу электронную почту, вам было выслано уведомление о бронировании.
+	#modal-yahh.modal-window.js-spec
+		.modal-dialog
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-dialog-wrp
+				.modal-content
+					.modal-header
+						h4.modal-title ЗАПИСАТЬСЯ к старшему стилисту
+					form(action="/", nethod="post").modal-body.js-validate
+						.modal-contacts
+							fieldset.modal-contacts-fieldset
+								input#user-name.modal-contacts-control(type='text', name='name', required)
+								label.modal-contacts-label ВАШЕ ИМЯ
+							fieldset.modal-contacts-fieldset
+								input#user-email.modal-contacts-control(type='text', name='email', required)
+								label.modal-contacts-label ЭЛ. ПОЧТА
+							fieldset.modal-contacts-fieldset
+								input#user-phone.modal-contacts-control(type='text', name='phone')
+								label.modal-contacts-label ТЕЛЕФОН
+
+						.dropdown_selector
+							p.dropdown_selector_desc Выберите Стилиста
+							.select.js-select
+								.select__text.js-select-text
+									.select__pic
+									p.select__name любой свободный
+								input(type="hidden", value="", name="collection", required).js-select-input
+								ul.select__list.js-select-list
+									li(data-id="0")
+										.select__pic
+										p.select__name любой свободный
+									li(data-id="1")
+										.select__pic
+											img(src="static/img/sec-01.jpg", alt="")
+										p.select__name проскурина мария.
+											span Младший стилист
+									li(data-id="2")
+										.select__pic
+											img(src="static/img/sec-02.jpg", alt="")
+										p.select__name белякова анастасия.
+											span Младший стилист
+									li(data-id="3")
+										.select__pic
+											img(src="static/img/sec-03.jpg", alt="")
+										p.select__name никитина наталья.
+											span Младший стилист
+									li(data-id="4")
+										.select__pic
+											img(src="static/img/sec-04.jpg", alt="")
+										p.select__name авдеева светлана.
+											span Младший стилист
+
+						.calendar
+							h5.calendar__title ВЫБЕРИТЕ УДОБНУЮ ДАТУ И ВРЕМЯ
+							.calendar__wrap
+								.inlinedate
+
+								.tempTable
+									table.table.table-responsive
+										thead
+											tr
+												th.mon
+												th.tue
+												th.wed
+												th.thu
+												th.fri
+												th.sat.weekends
+												th.sun.weekends
+										tbody
+											tr(style='border-bottom: 1px solid #ddd;')
+												td.mon ПН
+												td.tue ВТ
+												td.wed СР
+												td.thu ЧТ
+												td.fri ПТ
+												td.sat СБ
+												td.sun ВС
+											tr
+												td.mon.days 10:00
+												td.tue.days
+												td.wed.days 10:00
+												td.thu.days 10:00
+												td.fri.days 10:00
+												td.sat.days.weekends
+												td.sun.days.weekends 10:00
+											tr
+												td.mon.days 12:00
+												td.tue.days 12:00
+												td.wed.days 12:00
+												td.thu.days
+												td.fri.days 12:00
+												td.sat.days.weekends 12:00
+												td.sun.days.weekends 12:00
+											tr
+												td.mon.days 14:00
+												td.tue.days 14:00
+												td.wed.days 14:00
+												td.thu.days
+												td.fri.days 14:00
+												td.sat.days.weekends
+												td.sun.days.weekends 14:00
+											tr
+												td.mon.days 16:00
+												td.tue.days 16:00
+												td.wed.days 16:00
+												td.thu.days
+												td.fri.days 16:00
+												td.sat.days.weekends
+												td.sun.days.weekends 16:00
+											tr
+												td.mon.days 18:00
+												td.tue.days 18:00
+												td.wed.days 18:00
+												td.thu.days
+												td.fri.days 18:00
+												td.sat.days.weekends 18:00
+												td.sun.days.weekends 18:00
+											tr
+												td.mon.days 20:00
+												td.tue.days 20:00
+												td.wed.days 20:00
+												td.thu.days 20:00
+												td.fri.days 20:00
+												td.sat.days.weekends
+												td.sun.days.weekends 20:00
+
+						.subsribe
+							button.subsribe-btn.js-open-senks(type='button') Записаться
+		.modal-senks.js-senks
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-wrp
+				.modal-header
+					h4.modal-title Спасибо! Сервис успешно зарезервирован
+				.consul
+					p.consul__box 14 февраля  / 18:00
+					.consul__table
+						ul
+							li Вас обслуживает:
+							li Старший стилист Елена
+						ul
+							li Дата / время:
+							li 10-02-2017  /  10:00
+					h3.consul__title АЛИНА  ГИЗАТУЛЛИНА
+					p.consul__subtitle бельевой стайлинг
+				.modal__btns
+					a(href="#").btn-see
+						i.icon-calend
+						span добавить в календарь
+					a(href="#").btn-see
+						i.icon-all
+						span просмотр всех событий
+					a(href="#").btn-see
+						i.iocn-cls
+						span отменить бронирование
+			.modal__footer
+				p Пожалуйста, проверьте вашу электронную почту, вам было выслано уведомление о бронировании.
+	#modal-all.modal-window.js-spec
+		.modal-dialog
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-dialog-wrp
+				.modal-content
+					.modal-header
+						h4.modal-title ЗАПИСАТЬСЯ НА БРА-ФИТТИНГ ДЛЯ НОВЫХ КЛИЕНТОВ
+					form(action="/", nethod="post").modal-body.js-validate
+						.modal-contacts
+							fieldset.modal-contacts-fieldset
+								input#user-name.modal-contacts-control(type='text', name='name', required)
+								label.modal-contacts-label ВАШЕ ИМЯ
+							fieldset.modal-contacts-fieldset
+								input#user-email.modal-contacts-control(type='text', name='email', required)
+								label.modal-contacts-label ЭЛ. ПОЧТА
+							fieldset.modal-contacts-fieldset
+								input#user-phone.modal-contacts-control(type='text', name='phone')
+								label.modal-contacts-label ТЕЛЕФОН
+
+						.dropdown_selector
+							p.dropdown_selector_desc Выберите Стилиста
+							.select.js-select
+								.select__text.js-select-text
+									.select__pic
+									p.select__name любой свободный
+								input(type="hidden", value="", name="collection", required).js-select-input
+								ul.select__list.js-select-list
+									li(data-id="0")
+										.select__pic
+										p.select__name любой свободный
+									li(data-id="1")
+										.select__pic
+											img(src="static/img/sec-01.jpg", alt="")
+										p.select__name проскурина мария.
+											span Младший стилист
+									li(data-id="2")
+										.select__pic
+											img(src="static/img/sec-02.jpg", alt="")
+										p.select__name белякова анастасия.
+											span Младший стилист
+									li(data-id="3")
+										.select__pic
+											img(src="static/img/sec-03.jpg", alt="")
+										p.select__name никитина наталья.
+											span Младший стилист
+									li(data-id="4")
+										.select__pic
+											img(src="static/img/sec-04.jpg", alt="")
+										p.select__name авдеева светлана.
+											span Младший стилист
+
+						.calendar
+							h5.calendar__title ВЫБЕРИТЕ УДОБНУЮ ДАТУ И ВРЕМЯ
+							.calendar__wrap
+								.inlinedate
+
+								.tempTable
+									table.table.table-responsive
+										thead
+											tr
+												th.mon
+												th.tue
+												th.wed
+												th.thu
+												th.fri
+												th.sat.weekends
+												th.sun.weekends
+										tbody
+											tr(style='border-bottom: 1px solid #ddd;')
+												td.mon ПН
+												td.tue ВТ
+												td.wed СР
+												td.thu ЧТ
+												td.fri ПТ
+												td.sat СБ
+												td.sun ВС
+											tr
+												td.mon.days 10:00
+												td.tue.days
+												td.wed.days 10:00
+												td.thu.days 10:00
+												td.fri.days 10:00
+												td.sat.days.weekends
+												td.sun.days.weekends 10:00
+											tr
+												td.mon.days 12:00
+												td.tue.days 12:00
+												td.wed.days 12:00
+												td.thu.days
+												td.fri.days 12:00
+												td.sat.days.weekends 12:00
+												td.sun.days.weekends 12:00
+											tr
+												td.mon.days 14:00
+												td.tue.days 14:00
+												td.wed.days 14:00
+												td.thu.days
+												td.fri.days 14:00
+												td.sat.days.weekends
+												td.sun.days.weekends 14:00
+											tr
+												td.mon.days 16:00
+												td.tue.days 16:00
+												td.wed.days 16:00
+												td.thu.days
+												td.fri.days 16:00
+												td.sat.days.weekends
+												td.sun.days.weekends 16:00
+											tr
+												td.mon.days 18:00
+												td.tue.days 18:00
+												td.wed.days 18:00
+												td.thu.days
+												td.fri.days 18:00
+												td.sat.days.weekends 18:00
+												td.sun.days.weekends 18:00
+											tr
+												td.mon.days 20:00
+												td.tue.days 20:00
+												td.wed.days 20:00
+												td.thu.days 20:00
+												td.fri.days 20:00
+												td.sat.days.weekends
+												td.sun.days.weekends 20:00
+
+						.subsribe
+							button.subsribe-btn.js-open-senks(type='button') Записаться
+		.modal-senks.js-senks
+			btn.btn__close.js-close(type='button', data-dismiss='modal', aria-hidden='true')
+				span
+				span
+				span
+			.modal-wrp
+				.modal-header
+					h4.modal-title Спасибо! Сервис успешно зарезервирован
+				.consul
+					p.consul__box 14 февраля  / 18:00
+					.consul__table
+						ul
+							li Вас обслуживает:
+							li Старший стилист Елена
+						ul
+							li Дата / время:
+							li 10-02-2017  /  10:00
+					h3.consul__title АЛИНА  ГИЗАТУЛЛИНА
+					p.consul__subtitle бельевой стайлинг
+				.modal__btns
+					a(href="#").btn-see
+						i.icon-calend
+						span добавить в календарь
+					a(href="#").btn-see
+						i.icon-all
+						span просмотр всех событий
+					a(href="#").btn-see
+						i.iocn-cls
+						span отменить бронирование
+			.modal__footer
+				p Пожалуйста, проверьте вашу электронную почту, вам было выслано уведомление о бронировании.
+
