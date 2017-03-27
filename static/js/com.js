@@ -1,14 +1,14 @@
 
 $(document).ready(function() {
-	// $('.ui-datepicker-calendar').find('tbody').find('tr').find('td').find('a').click(function(){
-	// 	alert('da');
-	// });
+
 
 });
+
 selectCurrentWeek = function() {
     window.setTimeout(function() {
         $('.week-picker').find('.ui-datepicker-current-day a').addClass('ui-state-active');
     }, 1);
+
 };
 $(function() {
     // The style function
@@ -90,7 +90,9 @@ $(function() {
 
 
                 dat_week = $('.ui-state-active').parent().parent();
-                dat_week.css('background-color', '#eceff5');
+                dat_week.css('background-color', '#eceff5').addClass('highlight');
+                var alllweek = $('.ui-state-active').parents('tr').addClass('highlight');
+
                 // dat_week.prevAll('tr').css('background-color', '#f00');
 
                 // alert(dat_week.html());
@@ -206,14 +208,19 @@ $(function() {
                 truemon = daymon(mon);
                 monthsun = dateTraslate(sunday);
                 truesun = daysun(sunday);
+
             }
         });
     });
+
+
+    // $('.inlinedate .ui-datepicker-calendar tr').on('mouseover', function() { $(this).addClass('highlight'); });
+    // $('.inlinedate .ui-datepicker-calendar tr').on('mouseleave', function() { $(this).removeClass('highlight'); });
+
+
 });
 
 $(document).ready(function() {
-
-    $('.ui-datepicker-current-day').parent('tr').addClass('highlight').prevAll('tr').addClass('op');
 
 });
 
@@ -283,22 +290,45 @@ function dateTraslate(d) {
 }
 
 
-$('.table').on('click', '.days', function(e){
-	$('.tempTable tr td').removeClass('pickedDate');
-	$('.tempTable tr td').removeClass('pickedDateVisual');
-	$('.tempTable tr th').removeClass('pickedDateVisual');
+$('.days').on('click', function(e){
+    $(this).parents('.tempTable').find('td').removeClass('pickedDate');
+    $(this).parents('.tempTable').find('td').removeClass('pickedDateVisual');
+    $(this).parents('.tempTable').find('th').removeClass('pickedDateVisual');
+    var that = $(this),
+        dayClass = that.attr("class");
+        dayClass = dayClass.split(' ');
+    if(that.text() != ''){
+        that.addClass('pickedDate');
+        that.parents('.table').find('tr').eq(0).find('.'+dayClass[0]).addClass('pickedDateVisual');
+        that.parents('.table').find('tr').eq(1).find('.'+dayClass[0]).addClass('pickedDateVisual');
+    }
+});
+$('.days').hover(function(){
+
+	$(this).parents('.tempTable').find('td').removeClass('pickedDateVisual-hover');
+	$(this).parents('.tempTable').find('th').removeClass('pickedDateVisual-hover');
 	var that = $(this),
 		dayClass = that.attr("class");
 		dayClass = dayClass.split(' ');
+    // console.log(dayClass);
 	if(that.text() != ''){
-		that.addClass('pickedDate');
-		$('.'+dayClass[0]).eq(1).addClass('pickedDateVisual');
-		$('.'+dayClass[0]).eq(0).addClass('pickedDateVisual');
+		that.parents('.table').find('tr').eq(0).find('.'+dayClass[0]).addClass('pickedDateVisual-hover');
+		that.parents('.table').find('tr').eq(1).find('.'+dayClass[0]).addClass('pickedDateVisual-hover');
 	}
-
-
-
+}, function () {
+    $(this).parents('.tempTable').find('td').removeClass('pickedDateVisual-hover');
+    $(this).parents('.tempTable').find('th').removeClass('pickedDateVisual-hover');
+    var that = $(this),
+        dayClass = that.attr("class");
+        dayClass = dayClass.split(' ');
+    // console.log(dayClass);
+    if(that.text() != ''){
+        that.parents('.table').find('tr').eq(0).find('.'+dayClass[0]).addClass('pickedDateVisual-hover');
+        that.parents('.table').find('tr').eq(1).find('.'+dayClass[0]).addClass('pickedDateVisual-hover');
+    }
 });
+
+
 $('.selectordrop ul li a').click(function(){
 	var that = $(this);
 

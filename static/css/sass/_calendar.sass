@@ -18,8 +18,35 @@
 .op
 	opacity: .6
 .highlight
-	border-radius: 34px
+	position: relative
+	// border-radius: 34px
 	overflow: hidden
+	background-color: #eceff5 !important
+
+	td:first-child
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: -1px
+			background-image: url('../img/calendarBorderLeft.jpg')
+			background-size: 15px 34px
+			height: 34px
+			width: 15px
+	td:last-child
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			right: -1px
+			background-image: url('../img/calendarBorderRight.jpg')
+			background-size: 15px 34px
+			height: 34px
+			width: 15px
 
 /*ширина, позиция*/
 
@@ -161,7 +188,8 @@
 		border: 2px solid $fiolet
 .dropdown_selector
 	margin: 45px 0px
-.pickedDateVisual
+.pickedDateVisual,
+.pickedDateVisual-hover
 	color: #D5239B
 
 

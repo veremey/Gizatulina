@@ -177,7 +177,8 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 .boss { font-size: 0; background-color: #FFF; display: -webkit-flex; display: -ms-flexbox; display: flex; margin-bottom: 3%; }
 .boss__pic { display: inline-block; vertical-align: top; }
 .boss__content { display: inline-block; vertical-align: top; padding: 4% 7%; }
-.boss__title { font-size: 54px; color: #a24e84; line-height: 1.1; margin: 0 0 0.4em; font-family: "Lora", serif; }
+.boss__title { font-size: 54px; color: #a24e84; line-height: 1.1; margin: 0 0 5px; font-family: "Lora", serif; }
+.boss__title img { max-width: 100%; }
 .boss__subtitle { font-size: 16px; text-transform: uppercase; color: #a24e84; font-family: "opensans-regular", Arial, sans-serif; }
 .boss__text { margin-top: 30px; }
 .boss__desc { font-size: 15px; line-height: 24px; letter-spacing: 0.05em; color: #898989; font-family: "opensans-regular", Arial, sans-serif; font-weight: 300; }
@@ -189,7 +190,11 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 
 .op { opacity: 0.6; }
 
-.highlight { border-radius: 34px; overflow: hidden; }
+.highlight { position: relative; overflow: hidden; background-color: #eceff5 !important; }
+.highlight td:first-child { position: relative; }
+.highlight td:first-child:before { content: ""; position: absolute; top: 0; bottom: 0; left: -1px; background-image: url("../img/calendarBorderLeft.jpg"); background-size: 15px 34px; height: 34px; width: 15px; }
+.highlight td:last-child { position: relative; }
+.highlight td:last-child:before { content: ""; position: absolute; top: 0; bottom: 0; right: -1px; background-image: url("../img/calendarBorderRight.jpg"); background-size: 15px 34px; height: 34px; width: 15px; }
 
 /*╤ê╨╕╤Ç╨╕╨╜╨░, ╨┐╨╛╨╖╨╕╤å╨╕╤Å */
 .ui-datepicker { width: 300px; max-width: 100%; height: auto; margin: 5px auto 0; font: 9pt Arial, sans-serif; }
@@ -228,7 +233,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 
 .dropdown_selector { margin: 45px 0px; }
 
-.pickedDateVisual { color: #D5239B; }
+.pickedDateVisual, .pickedDateVisual-hover { color: #D5239B; }
 
 #secondTable .weekends { background-color: #ECEFF4; }
 
@@ -297,7 +302,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 .dropdown_selector .select__pic img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 .dropdown_selector .select__name { font-size: 16px; text-transform: uppercase; letter-spacing: 0.025em; color: #464646; font-family: "opensans-regular", Arial, sans-serif; font-weight: 300; }
 .dropdown_selector .select__name span { text-transform: lowercase; }
-.dropdown_selector .select__list { position: absolute; display: none; left: -1px; right: -1px; top: 100%; margin: 0; padding-bottom: 5px; border-radius: 0 0 3px 3px; z-index: 100; background: #fff; border: 1px solid #dadfe9; border-top: none; }
+.dropdown_selector .select__list { max-height: 550px; position: absolute; display: none; left: -1px; right: -1px; top: 100%; margin: 0; padding-bottom: 5px; border-radius: 0 0 3px 3px; z-index: 100; background: #fff; border: 1px solid #dadfe9; border-top: none; }
 .dropdown_selector .select__list li { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-align-items: center; -ms-flex-align: center; align-items: center; width: 100%; font-size: 14px; height: 88px; color: #000; padding: 0 20px; text-align: center; cursor: pointer; -o-transition: background 0.2s linear; transition: background 0.2s linear; text-transform: uppercase; font-family: "opensans-regular", Arial, sans-serif; -o-transition: 0.4s; transition: 0.4s; }
 .dropdown_selector .select__list li:hover { background-color: #f0f2f7; }
 

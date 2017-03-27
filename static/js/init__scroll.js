@@ -7,4 +7,8 @@ $(function () {
 		conteiner: '.modal-senks'
 	});
 
+	Scroll.initScroll({
+		conteiner: '.select__list'
+	});
+
 });

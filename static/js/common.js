@@ -6,6 +6,10 @@ $(document).ready(function() {
 		});
 	}
 
+	$('.ui-datepicker-calendar tr').on('click', function () {
+		$(this).addClass('highlight');
+	});
+
 	$('.adviser__icon, .btn__style').hover(function () {
 			$(this).parents('.adviser__item').addClass('is_hover');
 		}, function () {
