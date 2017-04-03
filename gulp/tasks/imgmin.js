@@ -15,6 +15,7 @@ gulp.task('img', function() {
     .pipe(changed(config.dest.img))
     .pipe(imagemin({
             progressive: true,
+            // optimizationLevel: 7,
             svgoPlugins: [{
                 removeViewBox: false
             }]

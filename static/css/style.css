@@ -133,6 +133,8 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 
 .iocn-cls { display: inline-block; vertical-align: middle; margin-right: 10px; background-image: url("../img/icons.png"); width: 13px; height: 13px; background-position: -43px -92px; }
 
+#sp-main-body .out { -webkit-transform: translateY(-60px); -ms-transform: translateY(-60px); -o-transform: translateY(-60px); transform: translateY(-60px); }
+
 .jumbo { position: relative; *zoom: 1; }
 .jumbo:after { content: " "; display: table; clear: both; }
 .jumbo__pic { position: relative; height: 335px; font-size: 0; background-color: #a24e84; overflow: hidden; }
@@ -277,8 +279,8 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 .modal-contacts-fieldset { position: relative; width: 32%; height: 40px; vertical-align: top; display: inline-block; margin-right: 2%; border: 1px solid #dadfe9; }
 .modal-contacts-fieldset:last-child { margin-right: 0; }
 .modal-contacts-fieldset.input--filled .modal-contacts-label { top: 10px; font-size: 10px; }
-.modal-contacts-fieldset.input--filled .modal-contacts-control { padding-top: 16px; }
-.modal-contacts-control { width: 100%; height: 100%; border: none; outline: none; padding: 0 20px; color: #464646; text-transform: uppercase; font-size: 12px; letter-spacing: 0.025em; font-family: "opensans-regular", Arial, sans-serif; font-weight: 600; -o-transition: 0.4s; transition: 0.4s; }
+.modal-contacts-fieldset.input--filled .modal-contacts-control { padding-top: 16px !important; }
+.modal-contacts-control { width: 100%; height: 100% !important; border: none; outline: none; padding: 0 20px !important; color: #464646; text-transform: uppercase; font-size: 12px; letter-spacing: 0.025em; font-family: "opensans-regular", Arial, sans-serif; font-weight: 600; -o-transition: 0.4s; transition: 0.4s; }
 .modal-contacts-control.has-error { border-color: #f00; box-shadow: 0 0 3px 1px #f00; }
 .modal-contacts-label { position: absolute; top: 50%; left: 20px; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); font-size: 12px; color: #b7b7b7; font-family: "opensans-regular", Arial, sans-serif; font-weight: 600; -o-transition: 0.4s; transition: 0.4s; }
 .modal-senks { display: none; position: relative; max-width: 1125px; width: 96%; margin: 0 auto; background-color: #FFF; box-shadow: 0 0 70px 3px rgba(0, 0, 0, 0.35); }
