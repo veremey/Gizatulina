@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6, b, strong, th { font-weight: normal; }
 .modal-window { position: relative; max-width: 1125px; width: 96%; max-height: 96vh; overflow: hidden; margin: 0 auto; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
 .modal-dialog { position: relative; max-width: 1125px; width: 96%; margin: 0 auto; background-color: #FFF; box-shadow: 0 0 70px 3px rgba(0, 0, 0, 0.35); }
 .modal-dialog-wrp { padding: 40px 7%; }
-.modal-content { padding: 1px; }
+.modal-contentik { padding: 1px; }
 .modal-title { color: #a24e84; font-size: 26px; line-height: 1.1; margin: 0.8em 0; text-transform: uppercase; text-align: center; letter-spacing: 0.025em; font-family: "opensans-regular", Arial, sans-serif; }
 .modal-body { margin-top: 40px; }
 .modal-contacts { font-size: 0; }
